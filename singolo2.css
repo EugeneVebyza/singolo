@@ -45,7 +45,8 @@
   padding: 35px 40px 40px 40px;
 }
 
-.portfolio h2 {
+.portfolio h2,
+.about_us h2 {
   margin-top: 25px;
   margin-bottom: 25px;
   font-size: 30px;
@@ -53,7 +54,8 @@
   letter-spacing: 0.2px;
 }
 
-.portfolio p {
+.portfolio p,
+.about_us > p {
   margin-top: -2.5px;
   margin-bottom: 14px;
   font-size: 18px;
@@ -100,4 +102,73 @@
   height: 187px;
   margin-top: 19px;
   margin-right: 20px;
+}
+
+/* About Us */
+
+.about_us {
+  height: 653px;
+  padding: 35px 40px 40px 40px;
+  color: #666d89;
+  border-bottom: 5.5px solid #fff;
+  background-color: #f2f2f2;
+}
+
+.about_us > p {
+  margin-top: -7px;
+  margin-bottom: 44px;
+  line-height: 1.7;
+  color: #767e9e;
+  font-weight: lighter;
+}
+
+.our_team {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.person {
+  margin-right: 20px;
+  width: 300px;
+  height: 460px;
+}
+
+.person img {
+  margin-bottom: 11px;
+}
+
+.person:nth-child(3n) {
+  margin-right: 0;
+}
+
+.person .name {
+  overflow: hidden;
+  letter-spacing: 0px;
+  font-size: 18px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.person p {
+  font-size: 12px;
+  height: 41.6px;
+  margin-top: 9px;
+  font-weight: 400;
+  overflow: hidden;
+  text-align: justify;
+  word-spacing: 1px;
+  line-height: 1.69;
+  letter-spacing: -0.2px;
+}
+
+.contacts {
+  padding-top: 24px;
+}
+
+.contacts img {
+  margin-right: 1px;
+}
+
+.contacts img:hover {
+  transform: scale(1.01);
 }
