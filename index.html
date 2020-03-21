@@ -8,29 +8,33 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="Home">
             <div class="header__logo">
                 <h1 class="logo__text">SINGOLO</h1>
                 <span class="logo__asterisk">*</span>
             </div>
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a class="active" href="#Home">Home</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <div class="main">
-            <section class="slider">
+            <section class="slider" id="Slider">
                 <img class="arrow left" alt="" src="Assets/left.svg">
-                <img class="phone vertical_phone" alt="" src="Assets/verticalphone.png">
-                <img class="phone gorizontal_phone" alt="" src="Assets/gorizontalphone.png">
                 <img class="arrow right" alt="" src="Assets/right.svg">
+                <div class="slader1">
+                    <img class="phone vertical_phone onv" alt="vertical phone" src="Assets/vertical_phone.png">
+                    <img class="phone gorizontal_phone ong" alt="gorizontal phone" src="Assets/gorizontal_phone.png">
+                    <img class="phone vertical_phone ofv hidden" alt="vertical phone black" src="Assets/phone_black_vr.png">
+                    <img class="phone gorizontal_phone ofg hidden" alt="gorizontal phone black" src="Assets/phone_black_gr.png">
+                </div>
             </section>
-            <section class="our__services">
+            <section class="our__services" id="Services">
                 <span class="heading">Our Services</span>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="services">
@@ -69,7 +73,7 @@
             </section>
         </div>
         <div class="wrapper">
-            <section class="portfolio">
+            <section class="portfolio" id="Portfolio">
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <div class="menu">
@@ -93,7 +97,7 @@
                     <img src="./Assets/row3/4.jpg" alt="">
                 </div>
             </section>
-            <section class="about_us">
+            <section class="about_us" id="About">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 <div class="our_team">
@@ -140,14 +144,24 @@
                 <section class="get_a_quote">
                     <h2>Get a Quote</h2>
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                    <div class="message-block hidden">
+                        <div class="message">
+                            <p>Письмо отправлено</p>
+                            <p class="topic_of">Тема: <span class="tema"></span></p>
+                            <p class="description_of">Описание: <span class="description"></span></p>
+                            <button class="close-btn">OK</button>
+                        </div>
+                    </div>
                     <form>
-                       <p><input type="text" name="name" pattern="[a-zA-Zа-яА-ЯёЁ]+" placeholder="Name(Required)" required /></p>
-                       <p><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email(Required)" required /></p>
-                       <p><input type="text" name="subject" placeholder="Subject"></p>
-                       <textarea rows="13" name="descritrion" placeholder="Describe your project in detail..."></textarea>
-                       <input type="submit" name="submit" value="Submit">
+                        <p><input class="input-name" type="text" name="name" placeholder="Name(Required)" required />
+                        </p>
+                        <p><input class="input-mail" type="email" name="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+                                placeholder="Email(Required)" required /></p>
+                        <p><input class="input-text" type="text" name="subject" placeholder="Subject"> </p>
+                        <textarea class="input-area" rows="13" name="descritrion" placeholder="Describe your project in detail..."></textarea>
+                        <input class="button-submit" type="submit" name="submit" value="Submit">
                     </form>
-                    <div class="contact">
+                    <div class="contact" id="Contact">
                         <div class="topic">Contact Information</div>
                         <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver- ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
                         <div class="cont">
@@ -174,4 +188,5 @@
                 </footer>
 
 </body>
+<script src="script.js"></script>
 </html>

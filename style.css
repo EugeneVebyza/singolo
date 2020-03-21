@@ -44,9 +44,13 @@
   }
 
   .header {
-    height: 89px;
-    border-bottom: 6px solid #323746;
-    background-color: #2D303A;
+    /* position: sticky;
+  top: 0; */
+  z-index: 4;
+  height: 89px;
+  font-weight: 700;
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
   }
 
   .header__logo {
@@ -82,7 +86,7 @@
     color: #ffffff;
   }
 
-  .navigation li a:hover {
+  .navigation li a:not(.active):hover {
     cursor: pointer;
     text-decoration: underline;
     color: #F06C64;
@@ -90,6 +94,7 @@
 
   a.active {
     color: #F06C64;
+    cursor: default;
   }
 
   .navigation li {
@@ -115,13 +120,31 @@
 
   .slider {
     position: relative;
-    background-color: #F06C64;
+    padding: 0;
     height: 594px;
-    border-bottom: 6px solid #EA676B;
   }
-
+  .hidden {
+    display: none;
+  }
   .slider img {
     position: absolute;
+  }
+  .slad2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+  }
+  .slader1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 594px;
+    width: 1020px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+    z-index: 1;
   }
 
   .left {
@@ -129,6 +152,7 @@
     height: 27px;
     left: 35px;
     top: 280px;
+    z-index: 3;
   }
 
   .right {
@@ -136,6 +160,7 @@
     height: 27px;
     right: 32px;
     top: 280px;
+    z-index: 3;
   }
 
   .gorizontal_phone {
@@ -229,6 +254,7 @@
     color: #666d89;
     height: 789px;
     padding: 34.7px 40px 40px 40px;
+    /* padding: 34.7px 30px 40px 40px; */
   }
 
   .about_us h2 {
@@ -268,17 +294,17 @@
     background-color: transparent;
     border-radius: 4px;
   }
-  .button:hover {
+  .button:not(.active):hover {
     cursor: pointer;
     background-color: #4e5b94;
     color: #bdbdbe;
-    text-decoration: blink;
+
   }
   .menu .active {
     color: #bdbdbe;
     border-color: #bdbdbe;
   }
-  .allworks img:nth-child(4n) {
+  .allworks img:nth-child(1),.allworks img:nth-child(5),.allworks img:nth-child(9) {
     margin-right: 0;
   }
 
@@ -294,6 +320,7 @@
     height: 187px;
     margin-top: 19px;
     margin-right: 20px;
+    /* margin-left: 20px; */
   }
 
   /* About Us */
@@ -375,6 +402,7 @@
 }
 
 .get_a_quote {
+  position: relative;
     height: 575px;
     padding: 58px 41px 15px 39px;
     background-color: #f06c64;
@@ -551,4 +579,36 @@ footer {
 
 .social_networks img:hover {
     transform: scale(1.2);
+}
+.message-block{
+  position: absolute;
+  width: 1020px;
+  height: 660px;
+  top: 0;
+  left: 0;
+  background: #0008;
+}
+
+.message {
+position: absolute;
+top: 25%;
+left: 27%;
+width: 400px;
+padding: 20px;
+color: black;
+text-align: center;
+border: 1px solid black;
+border-radius: 5px;
+background-color: #9b9faa;
+}
+
+.frame{
+  border: 5px solid #F06C64;
+  margin-right: -10px !important;
+  margin-top: 10px !important;
+}
+
+.message button{
+  width: 100px;
+
 }
